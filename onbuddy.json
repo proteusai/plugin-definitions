@@ -1,0 +1,42 @@
+{
+    "name": "OnBuddy",
+    "description": "Automate OnBuddy actions",
+    "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
+    "isPublic": true,
+    "orgId": "{{orgId}}",
+    "scopes": [ "APP_INTEGRATION_CHAT_WRITE", "APP_INTEGRATION_MESSAGE_WRITE", "WORKFLOW_WRITE", "EXTERNAL_EVENT_WRITE" ],
+    "tags": [ "OnBuddy" ],
+    "type": "APP",
+    "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/onbuddy/webhook",
+    "actions": [{
+        "name": "buddy.update",
+        "title": "Update Buddy",
+        "description": "Update your organization's AI buddy",
+        "argsSchema": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The display name of the buddy"
+                },
+                "personality": {
+                    "type": "string",
+                    "description": "The personality name of the buddy"
+                }
+            }
+        },
+        "returnSchema": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean",
+                    "description": "Determines if the operation failed or succeeded"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The error or success message of the operation"
+                }
+            }
+        }
+    }]
+}
