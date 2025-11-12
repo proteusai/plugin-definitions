@@ -1,0 +1,93 @@
+{
+    "name": "Slack (For OnBuddy)",
+    "description": "Slack is a cloud-based communication platform that helps teams and businesses collaborate in real-time through channels etc.",
+    "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
+    "isPublic": true,
+    "orgId": "{{orgId}}",
+    "scopes": [ "APP_INTEGRATION_CHAT_WRITE", "APP_INTEGRATION_MESSAGE_WRITE", "WORKFLOW_WRITE", "EXTERNAL_EVENT_WRITE" ],
+    "tags": [ "Team Communication", "Slack", "OnBuddy" ],
+    "type": "APP",
+    "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/app/webhook",
+    "actions": [{
+        "name": "chat.postMessage",
+        "title": "Post Message",
+        "description": "Sends a message to a channel",
+        "argsSchema": {
+            "type": "object",
+            "properties": {
+                "channel": {
+                    "type": "string",
+                    "description": "The channel to post the message to"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The message to post to the channel"
+                }
+            }
+        },
+        "returnSchema": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean",
+                    "description": "Determines if the operation failed or succeeded"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The error or success message of the operation"
+                }
+            }
+        }
+    }],
+    "externalEvents": [{
+        "name": "member_joined_channel",
+        "title": "Member Joined",
+        "description": "A user joined a public channel, private channel or MPDM",
+        "payloadSchema": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string",
+                    "description": "The first name of the member"
+                },
+                "last_name": {
+                    "type": "string",
+                    "description": "The last name of the member"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "The email of the member"
+                },
+                "slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the member"
+                }
+            }
+        }
+    }, {
+        "name": "member_left_channel",
+        "title": "Member Left",
+        "description": "A user left a public or private channel",
+        "payloadSchema": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string",
+                    "description": "The first name of the member"
+                },
+                "last_name": {
+                    "type": "string",
+                    "description": "The last name of the member"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "The email of the member"
+                },
+                "slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the member"
+                }
+            }
+        }
+    }]
+}
