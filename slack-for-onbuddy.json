@@ -41,7 +41,7 @@
     }],
     "externalEvents": [{
         "name": "member_joined_channel",
-        "title": "Member Joined",
+        "title": "When a member joins a channel",
         "description": "A user joined a public channel, private channel or MPDM",
         "payloadSchema": {
             "type": "object",
@@ -61,12 +61,36 @@
                 "slack_id": {
                     "type": "string",
                     "description": "The Slack ID of the member"
+                },
+                "channel_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the channel"
+                },
+                "channel_name": {
+                    "type": "string",
+                    "description": "The name of the channel"
+                },
+                "inviter_first_name": {
+                    "type": "string",
+                    "description": "The first name of the inviter"
+                },
+                "inviter_last_name": {
+                    "type": "string",
+                    "description": "The last name of the inviter"
+                },
+                "inviter_email": {
+                    "type": "string",
+                    "description": "The email of the inviter"
+                },
+                "inviter_slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the inviter"
                 }
             }
         }
     }, {
         "name": "member_left_channel",
-        "title": "Member Left",
+        "title": "When a member leaves a channel",
         "description": "A user left a public or private channel",
         "payloadSchema": {
             "type": "object",
