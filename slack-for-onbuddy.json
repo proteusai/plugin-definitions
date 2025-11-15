@@ -121,5 +121,30 @@
                 }
             }
         }
+    }, {
+        "name": "team_join",
+        "title": "When a new member joins",
+        "description": "A new member has joined",
+        "payloadSchema": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string",
+                    "description": "The first name of the member"
+                },
+                "last_name": {
+                    "type": "string",
+                    "description": "The last name of the member"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "The email of the member"
+                },
+                "slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the member"
+                }
+            }
+        }
     }]
 }
