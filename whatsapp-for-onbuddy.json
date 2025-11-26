@@ -1,0 +1,43 @@
+{
+    "name": "WhatsApp",
+    "description": "Connect your organization with the official OnBuddy WhatsApp chatbot.\n\nTo use the OnBuddy WhatsApp chatbot:\n 1. Go to Settings and ensure your phone number is saved.\n 2. Add this number as a contact on WhatsApp: +31 6 84759771 \nYou can now begin chatting with the OnBuddy WhatsApp chatbot. To change your current organization, switch your organization on the OnBuddy web app.",
+    "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
+    "isPublic": true,
+    "orgId": "{{orgId}}",
+    "scopes": [ "APP_INTEGRATION_CHAT_WRITE", "APP_INTEGRATION_MESSAGE_WRITE", "WORKFLOW_WRITE", "EXTERNAL_EVENT_WRITE" ],
+    "tags": [ "WhatsApp", "OnBuddy" ],
+    "type": "APP",
+    "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/whatsapp/proteus-webhook",
+    "installationUrl": "https://api-prd.onbuddy.ai/api/integrations/whatsapp/connect",
+    "actions": [{
+        "name": "sendMessage",
+        "title": "Send Message",
+        "description": "Sends a message to a WhatsApp user",
+        "argsSchema": {
+            "type": "object",
+            "properties": {
+                "phone": {
+                    "type": "string",
+                    "description": "The phone number of the user the message is to be sent to"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The message to send to the user"
+                }
+            }
+        },
+        "returnSchema": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean",
+                    "description": "Determines if the operation failed or succeeded"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The error or success message of the operation"
+                }
+            }
+        }
+    }]
+}
