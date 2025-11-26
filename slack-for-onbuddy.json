@@ -1,5 +1,5 @@
 {
-    "name": "Slack (For OnBuddy)",
+    "name": "Slack",
     "description": "Slack is a cloud-based communication platform that helps teams and businesses collaborate in real-time through channels etc.",
     "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
     "isPublic": true,
