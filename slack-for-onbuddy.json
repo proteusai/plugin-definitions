@@ -38,6 +38,36 @@
                 }
             }
         }
+    }, {
+        "name": "chat.directMessage",
+        "title": "Direct Message",
+        "description": "Sends a message to a user",
+        "argsSchema": {
+            "type": "object",
+            "properties": {
+                "slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the user to whom the message will be sent"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The message to send to the user"
+                }
+            }
+        },
+        "returnSchema": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean",
+                    "description": "Determines if the operation failed or succeeded"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The error or success message of the operation"
+                }
+            }
+        }
     }],
     "externalEvents": [{
         "name": "member_joined_channel",
