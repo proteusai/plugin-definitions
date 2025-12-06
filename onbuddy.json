@@ -38,6 +38,66 @@
                 }
             }
         }
+    }, {
+        "name": "member.add",
+        "title": "Add Member",
+        "description": "Add a user as a member of this organization",
+        "argsSchema": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string",
+                    "description": "The first name of the member"
+                },
+                "last_name": {
+                    "type": "string",
+                    "description": "The last name of the member"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "The email of the member"
+                },
+                "role": {
+                    "type": "string",
+                    "description": "The OnBuddy role (ADMIN, MEMBER, OWNER, EXTERNAL) of the member"
+                }
+            }
+        },
+        "returnSchema": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean",
+                    "description": "Determines if the operation failed or succeeded"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The error or success message of the operation"
+                },
+                "member": {
+                    "type": "object",
+                    "description": "The member who was just added",
+                    "properties": {
+                        "first_name": {
+                            "type": "string",
+                            "description": "The first name of the member"
+                        },
+                        "last_name": {
+                            "type": "string",
+                            "description": "The last name of the member"
+                        },
+                        "email": {
+                            "type": "string",
+                            "description": "The email of the member"
+                        },
+                        "role": {
+                            "type": "string",
+                            "description": "The OnBuddy role (ADMIN, MEMBER, OWNER, EXTERNAL) of the member"
+                        }
+                    }
+                }
+            }
+        }
     }],
     "mcp": {
         "label": "Test OnBuddy MCP",
