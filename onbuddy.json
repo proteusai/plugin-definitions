@@ -60,6 +60,10 @@
                 "role": {
                     "type": "string",
                     "description": "The OnBuddy role (ADMIN, MEMBER, OWNER, EXTERNAL) of the member"
+                },
+                "slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the member"
                 }
             }
         },
@@ -93,6 +97,10 @@
                         "role": {
                             "type": "string",
                             "description": "The OnBuddy role (ADMIN, MEMBER, OWNER, EXTERNAL) of the member"
+                        },
+                        "slack_id": {
+                            "type": "string",
+                            "description": "The Slack ID of the member"
                         }
                     }
                 }
