@@ -109,7 +109,6 @@
     }],
     "mcp": {
         "label": "Test OnBuddy MCP",
-        "url": "https://mcp.deepwiki.com/mcp",
-        "require_approval": "never"
+        "url": "https://mcp.deepwiki.com/mcp"
     }
 }
