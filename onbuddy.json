@@ -108,7 +108,7 @@
         }
     }],
     "mcp": {
-        "label": "Test OnBuddy MCP",
-        "url": "https://mcp.deepwiki.com/mcp"
+        "label": "OnBuddy MCP Server",
+        "url": "https://mcp.ngrok-free.app/onbuddy"
     }
 }
