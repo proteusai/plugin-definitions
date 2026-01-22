@@ -176,5 +176,30 @@
                 }
             }
         }
+    }, {
+        "name": "user_deleted",
+        "title": "When a member is deleted or deactivated",
+        "description": "A member has been deleted or deactivated",
+        "payloadSchema": {
+            "type": "object",
+            "properties": {
+                "first_name": {
+                    "type": "string",
+                    "description": "The first name of the member"
+                },
+                "last_name": {
+                    "type": "string",
+                    "description": "The last name of the member"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "The email of the member"
+                },
+                "slack_id": {
+                    "type": "string",
+                    "description": "The Slack ID of the member"
+                }
+            }
+        }
     }]
 }
