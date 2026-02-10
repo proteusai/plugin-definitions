@@ -1,0 +1,14 @@
+{
+    "name": "Google Workspace",
+    "description": "Import users from Google Workspace",
+    "image": "https://proteus-ai.s3.amazonaws.com/public/plugins/1769590195016-bz7jmc-google-workspace.png",
+    "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
+    "isPublic": true,
+    "orgId": "{{orgId}}",
+    "scopes": [ "APP_INTEGRATION_CHAT_WRITE", "APP_INTEGRATION_MESSAGE_WRITE", "WORKFLOW_WRITE", "EXTERNAL_EVENT_WRITE" ],
+    "tags": [ "Workspace Users", "Google", "OnBuddy" ],
+    "type": "APP",
+    "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/google-workspace/webhook",
+    "installationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/connect?service=workspace-users",
+    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/disconnect?service=workspace-users"
+}
