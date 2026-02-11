@@ -10,5 +10,5 @@
     "type": "APP",
     "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/google-workspace/webhook",
     "installationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/connect?service=workspace-users",
-    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/disconnect?service=workspace-users"
+    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/disconnect/services?service=workspace-users"
 }
