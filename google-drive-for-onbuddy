@@ -10,5 +10,5 @@
     "type": "APP",
     "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/google-drive/webhook",
     "installationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/connect?service=drive",
-    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/disconnect?service=drive"
+    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/disconnect/services?service=drive"
 }
