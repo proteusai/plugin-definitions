@@ -1,0 +1,14 @@
+{
+    "name": "Google Calendar",
+    "description": "Sync and manage events in Google Calendar",
+    "image": "https://proteus-ai.s3.amazonaws.com/public/plugins/1769590639179-s6mfip-google-drive.png",
+    "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
+    "isPublic": true,
+    "orgId": "{{orgId}}",
+    "scopes": [ "APP_INTEGRATION_CHAT_WRITE", "APP_INTEGRATION_MESSAGE_WRITE", "WORKFLOW_WRITE", "EXTERNAL_EVENT_WRITE" ],
+    "tags": [ "Calendar", "Google", "OnBuddy" ],
+    "type": "APP",
+    "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/google-calendar/webhook",
+    "installationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/connect?service=calendar",
+    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/google-workspace/disconnect/services?service=calendar"
+}
