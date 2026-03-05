@@ -161,6 +161,6 @@
     }],
     "mcp": {
         "label": "OnBuddy MCP Server",
-        "url": "https://mcp.ngrok-free.app/onbuddy"
+        "url": "https://onbuddy-mcp.onbuddy.ai/onbuddy"
     }
 }
