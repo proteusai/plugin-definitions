@@ -1,0 +1,17 @@
+{
+    "name": "Gmail",
+    "description": "Send, receive, and manage messages in Gmail",
+    "image": "https://proteus-ai.s3.amazonaws.com/public/plugins/1769590831404-d97dkf-gmail.png",
+    "events": [ "APP_INTEGRATION_CHAT_JOINED", "APP_INTEGRATION_MESSAGE_RECEIVED", "APP_INTEGRATION_ACTION_CALL" ],
+    "isPublic": true,
+    "orgId": "{{orgId}}",
+    "scopes": [ "APP_INTEGRATION_CHAT_WRITE", "APP_INTEGRATION_MESSAGE_WRITE", "WORKFLOW_WRITE", "EXTERNAL_EVENT_WRITE" ],
+    "tags": [ "Gmail", "Google", "Email", "OnBuddy" ],
+    "type": "APP",
+    "webhookUrl": "https://api-prd.onbuddy.ai/api/integrations/proteus/gmail/webhook",
+    "installationUrl": "https://api-prd.onbuddy.ai/api/integrations/gmail/install",
+    "uninstallationUrl": "https://api-prd.onbuddy.ai/api/integrations/gmail/uninstall",
+    "connectionUrl": "https://api-prd.onbuddy.ai/api/integrations/gmail/connect",
+    "connectionScope": "USER",
+    "disconnectionUrl": "https://api-prd.onbuddy.ai/api/integrations/gmail/disconnect"
+}
