@@ -3,12 +3,12 @@
   "manifestVersion": "1.16",
   "version": "1.0.0",
   "id": "<TEAMS_APP_ID>",
-  "packageName": "com.onbuddy.bot",
+  "packageName": "ai.onbuddy.bot",
   "developer": {
     "name": "OnBuddy",
-    "websiteUrl": "https://onbuddy.app",
-    "privacyUrl": "https://onbuddy.app/privacy",
-    "termsOfUseUrl": "https://onbuddy.app/terms"
+    "websiteUrl": "https://onbuddy.ai",
+    "privacyUrl": "https://onbuddy.ai/privacy-policy",
+    "termsOfUseUrl": "https://onbuddy.ai/terms-of-use"
   },
   "name": {
     "short": "OnBuddy",
@@ -16,7 +16,7 @@
   },
   "description": {
     "short": "Ask questions and receive task notifications.",
-    "full": "OnBuddy connects your team to your AI-powered onboarding assistant. Ask questions, get task reminders, and stay on top of your onboarding — all within Microsoft Teams."
+    "full": "OnBuddy connects your team to your AI-powered onboarding assistant. Ask questions about your onboarding plan, get reminders for upcoming tasks, and receive proactive notifications when work is assigned to you — all inside Microsoft Teams. Requires an OnBuddy account (sign up at https://onbuddy.ai). Admins connect their workspace from the OnBuddy Integration page using Microsoft sign-in; no scripts or files required."
   },
   "icons": {
     "color": "color.png",
@@ -28,9 +28,54 @@
       "botId": "<TEAMS_APP_ID>",
       "scopes": ["personal", "team", "groupchat"],
       "supportsFiles": false,
-      "isNotificationOnly": false
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": ["personal"],
+          "commands": [
+            {
+              "title": "help",
+              "description": "Show what OnBuddy can do and how to get started"
+            },
+            {
+              "title": "my tasks",
+              "description": "List the onboarding tasks currently assigned to you"
+            },
+            {
+              "title": "status",
+              "description": "Show your onboarding progress and what is due next"
+            }
+          ]
+        },
+        {
+          "scopes": ["team", "groupchat"],
+          "commands": [
+            {
+              "title": "help",
+              "description": "Show what OnBuddy can do in this channel"
+            },
+            {
+              "title": "my tasks",
+              "description": "List the onboarding tasks assigned to you"
+            }
+          ]
+        }
+      ]
     }
   ],
   "permissions": ["identity", "messageTeamMembers"],
-  "validDomains": ["<your-domain-without-https>"]
+  "validDomains": [
+    "api-prd.onbuddy.ai",
+    "workspace.onbuddy.ai",
+    "onbuddy.ai",
+    "token.botframework.com",
+    "login.microsoftonline.com"
+  ],
+  "showLoadingIndicator": false,
+  "isFullScreen": false,
+  "defaultInstallScope": "personal",
+  "defaultGroupCapability": {
+    "team": "bot",
+    "groupchat": "bot"
+  }
 }
